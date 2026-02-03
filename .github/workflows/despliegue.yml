@@ -14,12 +14,13 @@ jobs:
         with:
           php-version: 8.4
 
-      
+      - name: Validar sintaxis PHP
+        run: php -l index.php
 
   deploy:
     name: CI
     runs-on: ubuntu-latest
-    
+    needs: CI
     steps:
       - name: Simular despliegue
         run: |
