@@ -1,0 +1,28 @@
+name: German Campiño
+on: [push]
+jobs:
+  CI:
+    name: CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+
+      
+
+  deploy:
+    name: CI
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Simular despliegue
+        run: |
+          echo "Desplegando aplicación..."
+          echo "Copiando archivos al servidor..."
+          echo "Despliegue completado correctamente"
